@@ -2,3 +2,7 @@ search for instances of "lobster for dinner" and reply with "mmm... that sounds 
 
 gem install ruby
 ruby tweet.rb
+
+to automate put this in your cron:
+MAILTO=""
+* * * * * ruby /path/to/repo/tweet.rb
