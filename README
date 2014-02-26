@@ -5,3 +5,5 @@ ruby tweet.rb
 
 TODO:
 verify that we haven't replied yet to the tweet we're replying to.
+do not reply to retweets, conversation will not appear. for example:
+        https://twitter.com/Rubiikisser/status/438477236707278848
