@@ -2,7 +2,7 @@ search for instances of "lobster for dinner" and reply with "mmm... that sounds 
 
 ## Setup
 
-Copy .env.sample to .env then add keys, token, and secrets. Or set the keys and such in your environment.
+Copy `.env.sample` to `.env` then add keys, token, and secrets. Or set the keys and such in your environment.
 
 ## Run
 
@@ -12,8 +12,10 @@ ruby tweet.rb
 ## Automation
 
 to automate put this in your cron:
+```
 MAILTO=""
 * * * * * ruby /path/to/repo/tweet.rb
+```
 
 or
 
