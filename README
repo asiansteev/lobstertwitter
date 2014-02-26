@@ -1,8 +1,21 @@
 search for instances of "lobster for dinner" and reply with "mmm... that sounds good."
 
-gem install ruby
+## Setup
+
+Copy .env.sample to .env then add keys, token, and secrets. Or set the keys and such in your environment.
+
+## Run
+
+bundle install
 ruby tweet.rb
+
+## Automation
 
 to automate put this in your cron:
 MAILTO=""
 * * * * * ruby /path/to/repo/tweet.rb
+
+or
+
+Run `whenever -w` to write crontab using the defined schedule in `config/schedule.rb`
+
