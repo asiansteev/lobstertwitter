@@ -1,5 +1,7 @@
+search for instances of "lobster for dinner" and reply with "mmm... that sounds good."
+
 gem install ruby
-ruby search.rb
+ruby tweet.rb
 
 TODO:
 verify that we haven't replied yet to the tweet we're replying to.
