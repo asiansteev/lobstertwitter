@@ -22,8 +22,7 @@ end
 tweet = client.search('lobster for dinner -rt', result_type: 'recent').first
 
 unless already_replied?(client, tweet)
-  # without the @username in the tweet, the conversation doesn't appear
-  # on twitter
+  # without @username in the tweet, the conversation doesn't appear on twitter
   message = "@#{tweet.user.screen_name} #{random_phrase}"
   client.update message, in_reply_to_status_id: tweet.id.to_s
 end
