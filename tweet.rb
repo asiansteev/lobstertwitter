@@ -1,7 +1,9 @@
 require 'twitter'
 require 'yaml'
 
-credentials = YAML.load_file('credentials.yml')
+fn = File.dirname(File.expand_path(__FILE__)) + '/credentials.yml'
+credentials = YAML::load(File.open(fn))
+
 client = Twitter::REST::Client.new(credentials)
 
 # have we already replied to this user?
