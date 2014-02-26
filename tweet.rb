@@ -22,7 +22,7 @@ end
 tweet = client.search('lobster for dinner -rt', result_type: 'recent').
                take(1).first
 
-unless tweet.retweeted == 'true' || already_replied?(client, tweet)
+unless already_replied?(client, tweet)
   # without the @username in the tweet, the conversation doesn't appear
   # on twitter
   client.update "@#{tweet.user.screen_name} #{random_phrase}",
