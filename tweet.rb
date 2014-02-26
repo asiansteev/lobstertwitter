@@ -1,10 +1,17 @@
 require 'twitter'
 require 'yaml'
+require 'dotenv'
+Dotenv.load
 
-fn = File.dirname(File.expand_path(__FILE__)) + '/credentials.yml'
-credentials = YAML::load(File.open(fn))
+# Copy .env.sample to .env then add keys, token, and secrets. Or set these in
+# your environment.
 
-client = Twitter::REST::Client.new(credentials)
+client = Twitter::REST::Client.new do |config|
+  config.consumer_key        = ENV['CONSUMER_KEY']
+  config.consumer_secret     = ENV['CONSUMER_KEY']
+  config.access_token        = ENV['ACCESS_TOKEN']
+  config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
+end
 
 # have we already replied to this user?
 def already_replied? client, user
