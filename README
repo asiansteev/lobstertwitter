@@ -1,2 +1,5 @@
 gem install ruby
 ruby search.rb
+
+TODO:
+verify that we haven't replied yet to the tweet we're replying to.
