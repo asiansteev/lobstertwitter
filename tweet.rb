@@ -14,12 +14,8 @@ def already_replied? client, tweet
 end
 
 def random_phrase
-  ['mmm... that sounds delicious!',
-   'bring me some!',
-   'i\'m salivating...',
-   'hook it up!',
-   'that\'s my favorite.'
-  ].sample
+  fn = File.dirname(File.expand_path(__FILE__)) + '/phrases.yml'
+  YAML::load(File.open(fn)).sample
 end
 
 # -rt excludes retweets
