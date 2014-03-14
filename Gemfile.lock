@@ -11,6 +11,7 @@ GEM
     atomic (1.1.15)
     buftok (0.2.0)
     chronic (0.10.2)
+    dotenv (0.10.0)
     equalizer (0.0.9)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -48,5 +49,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv (~> 0.10.0)
   twitter (~> 5.7.1)
   whenever (~> 0.9.0)
